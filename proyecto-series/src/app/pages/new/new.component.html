@@ -1,0 +1,24 @@
+<div style="padding: 20px; max-width: 400px;">
+  <h2>Añadir Nueva Serie</h2>
+  <form [formGroup]="seriesForm" (ngSubmit)="onSubmit()">
+    <div style="margin-bottom: 10px;">
+      <label>Título:</label><br>
+      <input type="text" formControlName="title" style="width: 100%;">
+    </div>
+
+    <div style="margin-bottom: 10px;">
+      <label>Canal:</label><br>
+      <input type="text" formControlName="channel" style="width: 100%;">
+    </div>
+
+    <div style="margin-bottom: 10px;">
+      <label>Rating (0-10):</label><br>
+      <input type="number" formControlName="rating" style="width: 100%;">
+    </div>
+
+    <button type="submit" [disabled]="seriesForm.invalid" 
+            style="padding: 10px 20px; cursor: pointer;">
+      Enviar Serie
+    </button>
+  </form>
+</div>

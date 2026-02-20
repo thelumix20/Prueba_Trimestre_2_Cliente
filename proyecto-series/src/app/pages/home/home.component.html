@@ -1,0 +1,21 @@
+<div style="padding: 20px;">
+  <h2>Listado de Series</h2>
+  <table style="width: 100%; border-collapse: collapse; border: 1px solid #000;">
+    <thead style="background: #eee;">
+      <tr>
+        <th>Título</th>
+        <th>Canal</th>
+        <th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (serie of seriesList; track serie._id) {
+        <tr>
+          <td style="padding: 8px;">{{ serie.title }}</td>
+          <td style="padding: 8px;">{{ serie.channel }}</td>
+          <td style="padding: 8px;">{{ serie.rating }} / 10</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
